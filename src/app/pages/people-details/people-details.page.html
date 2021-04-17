@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/people"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{people?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-label *ngIf="people">
+    {{people.name}}-{{people.gender}}
+  </ion-label>
+</ion-content>
