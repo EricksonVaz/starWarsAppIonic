@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './services/api.service';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
-  providers: [ApiService,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ApiService,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },EmailComposer],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
